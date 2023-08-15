@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'intro';
+@import 'cv';
+@import 'header';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    overflow: hidden;
+    color: $font-color;
+    font-size: $base-font-size;
+}
+
