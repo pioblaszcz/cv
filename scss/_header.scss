@@ -6,6 +6,11 @@
     background-position: center;
 }
 
+.header__container{
+    max-width: 2200px;
+    margin: 0 auto;
+}
+
 .header__nav{
     display: flex;
     align-items: center;
@@ -64,6 +69,10 @@
           &:hover::after{
               width: 100%;
           }
+          &:nth-last-child(1):hover::after{
+            width: 0%;
+        }
+          
         }
     }
 }

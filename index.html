@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div class="scrollTop"></div>
     <main class="cv">
         <header class="header">
             <div class="header__container">
@@ -22,37 +23,38 @@
                         <img src="/images/logo.png" class="header__logo" alt="logo">
                         <img src="/images/gh.svg" class="header__github" alt="github">
                         <img src="/images/in.svg" class="header__in" alt="github">
-                        <img src="/images/uk.png" class="header__lang" alt="change_language">
                     </div>
                     <ul class="header__list">
                         <li id="home">Home</li>
                         <li id="about">O mnie</li>
                         <li id="projects">Projekty</li>
                         <li id="contact">Kontakt</li>
+                        <li> <img src="/images/uk.png" class="header__lang" alt="change_language"></li>
                     </ul>
                 </nav>
-            </div>
-            <div class="header__me">
-                <div class="header__informationElement">
-                    <p class="informationElement__p">Imie: <span>Piotr</span></p>
+                <div class="header__me">
+                    <div class="header__informationElement">
+                        <p class="informationElement__p">Imie: <span>Piotr</span></p>
+                    </div>
+                    <div class="header__informationElement">
+                        <p class="informationElement__p">Nazwisko: <span>Błaszczak</span> </p>
+                    </div>
+                    <div class="header__informationElement">
+                        <p class="informationElement__p">Wiek: <span>19</span> </p>
+                    </div>
+                    <div class="header__informationElement">
+                        <p class="informationElement__p">Lokalizacja: <span>Warszawa, Polska</span> </p>
+                    </div>
                 </div>
-                <div class="header__informationElement">
-                    <p class="informationElement__p">Nazwisko: <span>Błaszczak</span> </p>
+                <div class="header__intro">
+                    <div class="intro__typing"></div>
                 </div>
-                <div class="header__informationElement">
-                    <p class="informationElement__p">Wiek: <span>19</span> </p>
-                </div>
-                <div class="header__informationElement">
-                    <p class="informationElement__p">Lokalizacja: <span>Warszawa, Polska</span> </p>
-                </div>
-            </div>
-            <div class="header__intro">
-                <div class="intro__typing"></div>
             </div>
         </header>
         <div class="about">
             <div class="about__bio hiddenLeft">
-                <p class="bio__title">O mnie</p>
+                <h2 class="bio__title">O mnie</h2>
+                <div class="bio__image"></div>
                 <p class="bio__content"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae,
                     voluptas fuga, consectetur tempore dolore molestias eos harum aut distinctio rerum consequuntur
                     tempora excepturi fugit neque, beatae aperiam. Esse, itaque. Lorem ipsum dolor, sit amet consectetur
@@ -60,7 +62,7 @@
                     totam, cumque ad sit quidem illum minima nam sunt aperiam qui fugit.</p>
             </div>
             <div class="about__technology hiddenRight">
-                <p class="technology__title">Technologie</p>
+                <h2 class="technology__title">Technologie</h2>
                 <div class="technology__container">
                     <div class="technology__element">
                         <img src="images/icons/react.svg" alt="">
@@ -87,7 +89,7 @@
                 </div>
             </div>
             <div class="about__languages hiddenLeft">
-                <p class="languages__title">Jakie znam języki?</p>
+                <h2 class="languages__title">Jakie znam języki?</h2>
                 <div class="languages__lang">
                     <img src="/images/icons/poland.png" alt="poland">
                     <p>Polski <span>Narodowy</span> </p>
@@ -98,7 +100,7 @@
                 </div>
             </div>
             <div class="about__services">
-                <p class="services__title hidden">Czym się zajmuje?</p>
+                <h2 class="services__title hidden">Czym się zajmuje?</h2>
                 <div class="services__service hidden">
                     <img src="/images/icons/code.svg" alt="">
                     <p class="service__title">programowanie</p>
@@ -112,7 +114,7 @@
             </div>
         </div>
         <div class="projects">
-            <p class="projects__title hidden">Portfolio aplikacji</p>
+            <h1 class="projects__title hidden">Portfolio aplikacji</h1>
             <div class="projects__content">
                 <div class="projects__project projects__project--dm hiddenLeft">
                     <img src="/images/projects/drawingmaster2.png" alt="drawingmaster">
@@ -139,7 +141,7 @@
             </div>
         </div>
         <div class="contact">
-            <p class="contact__title hidden">Kontakt</p>
+            <h1 class="contact__title hidden">Kontakt</h1>
             <div class="contact__container hidden">
                 <div class="container__contact-left">
                     <p class="container__title">Napisz do mnie</p>

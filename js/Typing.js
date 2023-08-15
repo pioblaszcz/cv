@@ -24,7 +24,7 @@ export default class Typing {
             const letter = this.text[this.textIndex].substr(this.wordIndex, 1);
             if (this.wordIndex === this.text[this.textIndex].length) {
                 if (this.textIndex === this.text.length - 1) {
-                    return setTimeout(() => this.button.classList.remove('intro__cv--hiden'), 1200);
+                    return;
                 }
                 return setTimeout(this.goToNextLine, 1000);
             }
