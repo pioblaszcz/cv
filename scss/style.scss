@@ -2,6 +2,10 @@
 @import 'intro';
 @import 'cv';
 @import 'header';
+@import 'about';
+@import 'projects';
+@import 'contact';
+@import 'footer';
 
 *{
     margin: 0;
@@ -9,10 +13,21 @@
     box-sizing: border-box;
 }
 
+html{
+    scrollbar-width: none;
+}
+
 body{
     position: relative;
-    overflow: hidden;
+    -ms-overflow-style: none;
     color: $font-color;
+    max-width: 100vw;
     font-size: $base-font-size;
 }
+
+body::-webkit-scrollbar{
+display: none;
+}
+
+
 

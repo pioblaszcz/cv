@@ -1,0 +1,30 @@
+.footer{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    box-shadow: 0 0 5px 0 $font-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+
+    p{
+        span.bold{
+            font-weight: bold;
+            a{
+                text-decoration: none;
+                color: $font-color;
+                transition: .4s;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+

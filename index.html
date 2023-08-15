@@ -18,13 +18,17 @@
         <header class="header">
             <div class="header__container">
                 <nav class="header__nav">
-                    <img src="/images/uk.png" class="header__lang" alt="logo">
+                    <div class="header__images">
+                        <img src="/images/logo.png" class="header__logo" alt="logo">
+                        <img src="/images/gh.svg" class="header__github" alt="github">
+                        <img src="/images/in.svg" class="header__in" alt="github">
+                        <img src="/images/uk.png" class="header__lang" alt="change_language">
+                    </div>
                     <ul class="header__list">
-                        <li>Home</li>
-                        <li>O mnie</li>
-                        <li>Technologie</li>
-                        <li>Projekty</li>
-                        <li>Kontakt</li>
+                        <li id="home">Home</li>
+                        <li id="about">O mnie</li>
+                        <li id="projects">Projekty</li>
+                        <li id="contact">Kontakt</li>
                     </ul>
                 </nav>
             </div>
@@ -46,6 +50,122 @@
                 <div class="intro__typing"></div>
             </div>
         </header>
+        <div class="about">
+            <div class="about__bio hiddenLeft">
+                <p class="bio__title">O mnie</p>
+                <p class="bio__content"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae,
+                    voluptas fuga, consectetur tempore dolore molestias eos harum aut distinctio rerum consequuntur
+                    tempora excepturi fugit neque, beatae aperiam. Esse, itaque. Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Natus sed voluptatem quis eligendi illum repudiandae incidunt numquam? Doloremque
+                    totam, cumque ad sit quidem illum minima nam sunt aperiam qui fugit.</p>
+            </div>
+            <div class="about__technology hiddenRight">
+                <p class="technology__title">Technologie</p>
+                <div class="technology__container">
+                    <div class="technology__element">
+                        <img src="images/icons/react.svg" alt="">
+                        <p>React</p>
+                    </div>
+                    <div class="technology__element">
+                        <img src="images/icons/js.svg" alt="">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="technology__element">
+                        <img src="images/icons/sass.svg" alt="">
+                        <p>Css (Scss)</p>
+                    </div>
+                    <div class="technology__element">
+                        <img src="images/icons/html.svg" alt="">
+                        <p>HTML</p>
+                    </div>
+                    <div class="technology__element"><img src="images/icons/git.png" alt="">
+                        <p>Git</p>
+                    </div>
+                    <div class="technology__element"><img src="images/icons/bootstrap.svg" alt="">
+                        <p>Bootstrap <span>(podstawy)</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="about__languages hiddenLeft">
+                <p class="languages__title">Jakie znam języki?</p>
+                <div class="languages__lang">
+                    <img src="/images/icons/poland.png" alt="poland">
+                    <p>Polski <span>Narodowy</span> </p>
+                </div>
+                <div class="languages__lang">
+                    <img src="/images/icons/gb.png" alt="grat britain">
+                    <p>Angielski <span>Komunikatywny (B1)</span> </p>
+                </div>
+            </div>
+            <div class="about__services">
+                <p class="services__title hidden">Czym się zajmuje?</p>
+                <div class="services__service hidden">
+                    <img src="/images/icons/code.svg" alt="">
+                    <p class="service__title">programowanie</p>
+                    <p class="service__description">Strony WWW, aplikacje internetowe, blogi</p>
+                </div>
+                <div class="services__service hidden">
+                    <img src="/images/icons/graphic.png" alt="">
+                    <p class="service__title">grafika</p>
+                    <p class="service__description">Interfejsy aplikacji, obróbka grafik (Photoshop)</p>
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+            <p class="projects__title hidden">Portfolio aplikacji</p>
+            <div class="projects__content">
+                <div class="projects__project projects__project--dm hiddenLeft">
+                    <img src="/images/projects/drawingmaster2.png" alt="drawingmaster">
+                    <div class="project__description">
+                        <p class="project__title">Drawing Master</p>
+                        <div class="project__technologies">
+                            <div>React.JS</div>
+                            <div>Scss</div>
+                        </div>
+                        <p class="project__p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum recusandae ipsa temporibus
+                            saepe dolor eaque neque illo, tempore inventore accusantium deleniti omnis? Eos officiis
+                            eveniet dignissimos nostrum tempore ut excepturi!
+                        </p>
+                        <div class="project__buttons">
+                            <button><a href="https://pioblaszcz.github.io/drawing-master/" target="_blank">Zobacz
+                                    aplikacjie</a></button><button><a
+                                    href="https://github.com/pioblaszcz/drawing-master" target="_blank">Zobacz
+                                    kod</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__project hiddenRight"></div>
+            </div>
+        </div>
+        <div class="contact">
+            <p class="contact__title hidden">Kontakt</p>
+            <div class="contact__container hidden">
+                <div class="container__contact-left">
+                    <p class="container__title">Napisz do mnie</p>
+                    <p> <img src="/images/icons/mail.png" alt="mail"> piotrblaszczakoo@gmail.com</p>
+                    <p> <img src="/images/icons/phone.svg" alt="phone">+48 792 868 079</p>
+                    <div class="container__icons">
+                        <a href=""><img src="/images/in.svg" alt=""></a>
+                        <a href=""><img src="/images/gh.svg" alt=""></a>
+                        <a href=""><img src="/images/icons/fb.svg" alt=""></a>
+                    </div>
+                    <a href="" class="container__button" download>Pobierz CV</a>
+                </div>
+                <div class="container__contact-right">
+                    <form class="contact__form">
+                        <input type="text" name="name" placeholder="Twoje imie" required>
+                        <input type="email" name="email" placeholder="Twój email" required>
+                        <textarea name="message" rows="6" placeholder="Twoja wiadomość"></textarea>
+                        <button type="submit" class="form__submit">Wyślij</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="footer hidden">
+            <p>Copyright © <span class="bold">Piotr Błaszczak</span> - 2023</p>
+            <p>Projekt i realizacja - <span class="bold"><a href="piotrblaszczak.pl">piotrblaszczak.pl</a></span></p>
+        </footer>
     </main>
 
     <script src="js/index.js" type="module"></script>

@@ -5,4 +5,31 @@
     background-color: $base-bgc;
 }
 
+.hidden{
+    opacity: 0;
+    transition: 3s;
+}
 
+.hiddenDown{
+    transform: translateY(100%);
+    transition: 2s 1s;
+}
+
+
+.hiddenLeft{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 2s;
+}
+
+.hiddenRight{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 2s;
+}
+
+
+.show{
+    opacity: 1;
+    transform: translateX(0);
+}

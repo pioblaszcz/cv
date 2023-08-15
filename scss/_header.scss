@@ -12,11 +12,32 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    .header__lang{
-        cursor: pointer;
+    .header__images{
+        display: flex;
+        align-items: center;
+    }
+
+    .header__logo{
         height: 55px;
         border-radius: 50%;
         box-shadow: 0 0 4px $font-color;
+    }
+
+    .header__github{
+        cursor: pointer;
+        height: 25px;
+        margin: 0 12px;
+    }
+
+    .header__in{
+        cursor: pointer;
+        height: 25px;
+        margin-right: 12px;
+    }
+
+    .header__lang{
+        cursor: pointer;
+        height: 25px;
     }
 
     .header__list{

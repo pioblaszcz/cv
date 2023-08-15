@@ -1,4 +1,4 @@
-const SPEED = 100;
+const SPEED = 50;
 const TEXT = [
     "Cześć!",
     "Mam na imie Piotrek i zajmuję się tworzeniem aplikacji internetowych.",
