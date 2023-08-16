@@ -21,6 +21,8 @@ class Website {
         this.hamburgerElement = document.querySelector('.header__hamburger');
         this.menu = document.querySelector('.header__list');
 
+        this.scrollTopElement = document.querySelector('.scrollTop');
+
         this.init();
     }
 
@@ -38,8 +40,9 @@ class Website {
 
         this.hamburgerElement.addEventListener('click', this.toggleHamburgerActive);
 
+        this.scrollTopElement.addEventListener('click', () => this.scrollTo(this.header))
 
-        window.addEventListener('scroll', this.hideMenu);
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     showIntro = () => {
@@ -83,7 +86,15 @@ class Website {
         this.menu.classList.toggle('header__list--active');
     }
 
-    hideMenu = () => {
+    handleScroll = () => {
+        if (window.pageYOffset > window.innerHeight) {
+            this.scrollTopElement.classList.add('scrollTop--active');
+            this.scrollTopElement.style.transition = '1s 2s';
+        }
+        if (window.pageYOffset < window.innerHeight) {
+            this.scrollTopElement.classList.remove('scrollTop--active');
+            this.scrollTopElement.style.transition = '1s';
+        }
         if (!this.menu.classList.contains('header__list--active')) return;
         this.toggleHamburgerActive();
     }
