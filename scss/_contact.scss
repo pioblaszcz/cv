@@ -28,7 +28,6 @@
 }
 
 .contact__container{
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     display: flex;
     width: 80%;
 
@@ -53,6 +52,8 @@
             flex-wrap: wrap;
             justify-content: center;
             padding: 0 40px;
+            margin-top: 40px;
+            order: 1;
         }
 
         .container__title{
@@ -71,7 +72,7 @@
             }
 
             @media screen and (max-width: $mobileXL){
-                text-align: center;
+                display: none;
             }
         }
 

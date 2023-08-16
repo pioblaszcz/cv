@@ -24,7 +24,7 @@
         width: 80%;
         height: 280px;
         color: $font-color;
-        font-family: $font-family;
+        font-family: $digital-family, $font-family;
         font-weight: 400;
 
         @media screen and (max-height: 510px){
@@ -34,23 +34,23 @@
         p{
             margin: 0;
             line-height: 150%;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             text-shadow: 0 0 1px rgb(255, 255, 255);
 
             @media screen and (max-width: $desktopL){
-               font-size: 1.1rem;
+               font-size: 1.4rem;
               }
 
               @media screen and (max-width: $mobileXL){
-               font-size: 1rem;
+               font-size: 1.2rem;
             }
 
             @media screen and (max-width: $mobileXS){
-                font-size: 0.9rem;
+                font-size: 1.1rem;
                 }
 
             @media screen and (max-width: $mobileXXS){
-               font-size: 0.8rem;
+               font-size: 1rem;
                }
 
             &:nth-last-of-type(1)::after{

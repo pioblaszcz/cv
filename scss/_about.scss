@@ -14,7 +14,6 @@
     }
 
     .about__bio{
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         width:  50%;
         max-width: 1200px;
         display: flex;
@@ -105,7 +104,6 @@
 
     .about__technology{
         margin-top: 150px;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         width: 40%;
         height: 400px;
         margin-left: auto;
@@ -223,7 +221,6 @@
     }
 
     .about__languages{
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         width: 30%;
         height: 200px;
         margin-right: auto;
@@ -329,7 +326,7 @@
             position: relative;
             flex-basis: 400px;
             height: 400px;
-            box-shadow: 0 0 2px $contrast-color;
+            box-shadow: 0 0 2px $font-color;
             border-radius: 22px;
             
             @media screen and (max-width: $desktopXL){

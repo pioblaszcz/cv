@@ -36,7 +36,10 @@ class Website {
         this.projectsButton.addEventListener('click', () => this.scrollTo(this.projects));
         this.contactButton.addEventListener('click', () => this.scrollTo(this.contact));
 
-        this.hamburgerElement.addEventListener('click', this.toggleHamburgerActive)
+        this.hamburgerElement.addEventListener('click', this.toggleHamburgerActive);
+
+
+        window.addEventListener('scroll', this.hideMenu);
     }
 
     showIntro = () => {
@@ -78,6 +81,11 @@ class Website {
         this.hamburgerElement.classList.toggle('header__hamburger--active');
         this.headerBackgroundElement.classList.toggle('header__background--active');
         this.menu.classList.toggle('header__list--active');
+    }
+
+    hideMenu = () => {
+        if (!this.menu.classList.contains('header__list--active')) return;
+        this.toggleHamburgerActive();
     }
 
 }
