@@ -1,14 +1,117 @@
 .header{
     padding: 20px 10%;
     height: 100vh;
+
+    @media screen and (max-width: $desktopL){
+        padding: 20px 5%;
+      }
+}
+
+.header__background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
     background-image: url('../images/bgc2.jpg');
     background-size: cover;
     background-position: center;
+    transition: .3s;
+   
+    &--active{
+        filter: blur(2px);
+    }
+
+    @media screen and (max-width: $desktop){
+        background-image: url('../images/bgcmid.jpg');
+       }
+
+       @media screen and (max-width: $mobileL){
+        background-image: url('../images/bgcsm.jpg');
+       }
 }
 
 .header__container{
     max-width: 2200px;
     margin: 0 auto;
+}
+
+.header__hamburger{
+
+    @mixin hamburgerLine{
+        width: 100%;
+        height: 3px;
+        background-color: $font-color;
+        position: absolute;
+        display: none;
+
+        @media screen and (max-width: $mobileXL){
+            display: block;
+        }
+    }
+
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    @media screen and (max-width: $mobileXL){
+        display: block;
+    }
+
+    .hamburger__box{
+        width: 38px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+
+        @media screen and (max-width: $mobileXS){
+            width: 30px;
+            height: 20px;
+        }
+    
+    }
+
+    .hamburger__inner{
+        @include hamburgerLine;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color .3s ease-in-out;
+
+        &::before,&::after{
+            @include hamburgerLine;
+
+            content: '';
+            left: 0;
+            transition: transform .3s .2s ease-in-out;
+        }
+
+        &::before{
+            top: -10px;
+        }
+
+        &::after{
+            top: 10px;
+        }
+    }
+
+    &--active{
+        .hamburger__inner{
+            background-color: transparent;
+
+            &::before{
+                transform: translateY(10px) rotate(45deg);
+            }
+
+            &::after{
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+    }
+
+
 }
 
 .header__nav{
@@ -20,29 +123,43 @@
     .header__images{
         display: flex;
         align-items: center;
+        z-index: 2;
     }
 
     .header__logo{
         height: 55px;
         border-radius: 50%;
         box-shadow: 0 0 4px $font-color;
+        animation: morphing 10s infinite;
+
+        @media screen and (max-width: $desktop){
+            height: 45px;
+         }
+
+         @media screen and (max-width: $mobileXS){
+          height: 38px;
+         }
+    }
+
+    .header__icon{
+        cursor: pointer;
+        width: 25px;
+        @media screen and (max-width: $desktop){
+           width: 22px;
+          }
     }
 
     .header__github{
-        cursor: pointer;
-        height: 25px;
         margin: 0 12px;
-    }
-
-    .header__in{
-        cursor: pointer;
-        height: 25px;
-        margin-right: 12px;
     }
 
     .header__lang{
         cursor: pointer;
-        height: 25px;
+        width: 25px;
+    }
+
+    .header__in{
+        margin-right: 12px;
     }
 
     .header__list{
@@ -64,6 +181,10 @@
             left: 0;
             bottom: -6px;
             transition: .5s;
+
+            @media screen and (max-width: $desktop){
+                height: 2px;
+               }
           }
 
           &:hover::after{
@@ -74,6 +195,45 @@
         }
           
         }
+
+        @media screen and (max-width: $mobileXL){
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            width: 80vw;
+            height: 100vh;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.89);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            transition: 1s;
+
+            li{
+               font-size: 1.6rem;
+
+               &:nth-last-child(1){
+                   img{
+                       height: 40px;
+                       width: 40px;
+                   }
+               }
+
+               @media screen and (max-width: $mobileS){
+               font-size: 1.2rem;
+            }
+            }
+
+            &--active{
+                transform: translateX(0);
+            }
+        }
+
+        @media screen and (max-width: $mobile){
+            width: 75vw;
+         }
     }
 }
 
@@ -83,12 +243,32 @@
     width: 350px;
     height: 280px;
 
+    @media screen and (max-width: $mobileS){
+        width: 100%;
+     }
+
+     @media screen and (max-width: $mobile){
+        height: 240px;
+     }
+
+     @media screen and (max-width: $mobileXS){
+        height: 200px;
+       }
+
     .header__informationElement{
         position: relative;
         width: calc(100% - 27px);
         margin-left: 27px;
         height: 25%;
         border-left: 1px solid rgba(255, 255, 255, 0.486);
+
+        @media screen and (max-width: $desktop){
+           margin-left: 22.5px;
+         }
+
+         @media screen and (max-width: $mobileXS){
+            margin-left: 19px;
+           }
 
         &::after{
             content: '';
@@ -111,6 +291,10 @@
         left: 12px;
         top: 50%;
         transform: translateY(-50%);
+
+        @media screen and (max-width: $mobileS){
+            font-size: .9rem;
+         }    
 
         span{
             color: #959595;

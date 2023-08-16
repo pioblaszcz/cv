@@ -16,20 +16,26 @@
 <body>
     <div class="scrollTop"></div>
     <main class="cv">
+        <div class="header__background"></div>
         <header class="header">
             <div class="header__container">
                 <nav class="header__nav">
                     <div class="header__images">
                         <img src="/images/logo.png" class="header__logo" alt="logo">
-                        <img src="/images/gh.svg" class="header__github" alt="github">
-                        <img src="/images/in.svg" class="header__in" alt="github">
+                        <img src="/images/gh.svg" class="header__github header__icon" alt="github">
+                        <img src="/images/in.svg" class="header__in header__icon" alt="github">
                     </div>
+                    <button class="header__hamburger">
+                        <span class="hamburger__box">
+                            <span class="hamburger__inner"></span>
+                        </span>
+                    </button>
                     <ul class="header__list">
                         <li id="home">Home</li>
                         <li id="about">O mnie</li>
                         <li id="projects">Projekty</li>
                         <li id="contact">Kontakt</li>
-                        <li> <img src="/images/uk.png" class="header__lang" alt="change_language"></li>
+                        <li><img src="/images/uk.png" class="header__lang" alt="change_language"></li>
                     </ul>
                 </nav>
                 <div class="header__me">
@@ -100,7 +106,7 @@
                 </div>
             </div>
             <div class="about__services">
-                <h2 class="services__title hidden">Czym się zajmuje?</h2>
+                <h1 class="services__title hidden">Czym się zajmuje?</h1>
                 <div class="services__service hidden">
                     <img src="/images/icons/code.svg" alt="">
                     <p class="service__title">programowanie</p>
@@ -137,7 +143,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projects__project hiddenRight"></div>
+                <!-- <div class="projects__project hiddenRight"></div> -->
             </div>
         </div>
         <div class="contact">

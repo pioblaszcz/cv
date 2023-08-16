@@ -7,6 +7,14 @@
     max-width: 2200px;
     margin: 0 auto;
 
+    @media screen and (max-width: $desktopXL){
+        margin-top: 60px
+    }
+
+    @media screen and (max-width: $mobileS){
+       padding: 40px 2.5%;
+     }     
+
     .projects__title{
         flex-basis: 100%;
         height: 100px;
@@ -36,12 +44,53 @@
             height: 320px;
          }
 
+        @media screen and (max-width: $desktop){
+            width: 60%;
+            margin: 0 auto;
+            height: 600px;
+            margin-bottom: 60px;
+            padding-left: 0;
+            flex-direction: column;
+
+            &:nth-last-child(1){
+                margin-bottom: 10px;
+            }
+        }
+
+        @media screen and (max-width: $mobileXL){
+            width: 70%;
+            height: auto;
+            padding-bottom: 20px;
+        }
+
+        @media screen and (max-width: $mobileL){
+           width: 78%;
+         }
+
+        @media screen and (max-width: $mobileM){
+            width: 85%;
+        }
+
+        @media screen and (max-width: $mobile){
+            width: 100%;
+         }
+
         &--dm{
             box-shadow: 0 2px 4px 0 $dm-color;
         }
 
         img{
             height: 60%;
+
+            @media screen and (max-width: $desktopL){
+                height: 50%;
+            }
+
+            @media screen and (max-width: $desktop){
+                width: 80%;
+                padding: 15px 0;
+                height: auto;
+            }
         }
 
         .project__description{
@@ -52,6 +101,10 @@
             display: flex;
             flex-direction: column;
 
+            @media screen and (max-width: $desktop){
+                padding: 0 20px;
+            }
+
             .project__title{
                 font-weight: bold;
                 font-size: 2rem;
@@ -60,6 +113,11 @@
                 @media screen and (max-width: $desktopXL){
                     font-size: 1.8rem;
                  }
+
+                 @media screen and (max-width: $desktop){
+                   font-size: 1.7rem;
+                } 
+    
             }
 
             .project__technologies{
@@ -87,12 +145,21 @@
                 @media screen and (max-width: $desktopXL){
                     line-height: 120%;
                  }
+
+                 @media screen and (max-width: $desktop){
+                   margin-top: 5px;
+                }
+    
             }
             
             .project__buttons{
                 width: 100%;
                 display: flex;
                 margin-top: 20px;
+
+                @media screen and (max-width: $desktop){
+                   flex-direction: column;
+                }    
 
                 button{
                     cursor: pointer;
@@ -110,6 +177,10 @@
                         font-size: .9rem;
                      }
 
+                     @media screen and (max-width: $desktop){
+                        margin-bottom: 15px;
+                    }        
+
                     a{
                         text-decoration: none;
                         color: $description-color;
@@ -118,6 +189,15 @@
 
                     &:nth-child(2){
                         margin-left: 40px;
+
+                        @media screen and (max-width: $desktopL){
+                            margin-left: 20px;
+                         }
+
+                         @media screen and (max-width: $desktop){
+                           margin: 0;
+                        }
+            
                     }
 
                     &:hover{

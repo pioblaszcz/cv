@@ -17,6 +17,10 @@ class Website {
         this.projects = document.querySelector('.projects');
         this.contact = document.querySelector('.contact');
 
+        this.headerBackgroundElement = document.querySelector('.header__background');
+        this.hamburgerElement = document.querySelector('.header__hamburger');
+        this.menu = document.querySelector('.header__list');
+
         this.init();
     }
 
@@ -31,6 +35,8 @@ class Website {
         this.aboutButton.addEventListener('click', () => this.scrollTo(this.about));
         this.projectsButton.addEventListener('click', () => this.scrollTo(this.projects));
         this.contactButton.addEventListener('click', () => this.scrollTo(this.contact));
+
+        this.hamburgerElement.addEventListener('click', this.toggleHamburgerActive)
     }
 
     showIntro = () => {
@@ -54,10 +60,24 @@ class Website {
     }
 
     scrollTo = (elementToScroll) => {
+        if (this.menu.classList.contains('header__list--active')) {
+            this.toggleHamburgerActive();
+            setTimeout(() => elementToScroll.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            }), 450);
+            return;
+        }
         elementToScroll.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         })
+    }
+
+    toggleHamburgerActive = () => {
+        this.hamburgerElement.classList.toggle('header__hamburger--active');
+        this.headerBackgroundElement.classList.toggle('header__background--active');
+        this.menu.classList.toggle('header__list--active');
     }
 
 }

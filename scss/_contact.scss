@@ -7,6 +7,11 @@
     overflow: hidden;
     max-width: 2200px;
     margin: 0 auto;
+
+    @media screen and (max-width: $mobileL){
+        padding-left: 1%;
+        padding-right: 1%;
+     }
 }
 
 .contact__title{
@@ -15,6 +20,11 @@
     text-align: center;
     font-family: $digital-family;
     color: $title-color;
+
+    @media screen and (max-width: $desktopL){
+        height: 80px;
+    }
+
 }
 
 .contact__container{
@@ -22,10 +32,32 @@
     display: flex;
     width: 80%;
 
+    @media screen and (max-width: $desktop){
+        width: 90%;
+        justify-content: space-evenly;
+    }
+
+    @media screen and (max-width: $mobileXL){
+        flex-direction: column;
+    }
+
     .container__contact-left{
         flex-basis: 35%;
 
+        @media screen and (max-width: $desktop){
+            flex-basis: 40%;
+           }
+
+        @media screen and (max-width: $mobileXL){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 40px;
+        }
+
         .container__title{
+            flex-basis: 100%;
+            order: 1;
             color: $contrast-color;
             font-weight: bold;
             font-size: 3rem;
@@ -33,14 +65,40 @@
             @media screen and (max-width: $desktopXXL){
                 font-size: 2.3rem;
             }
+
+            @media screen and (max-width: $desktopL){
+                font-size: 2rem;
+            }
+
+            @media screen and (max-width: $mobileXL){
+                text-align: center;
+            }
         }
 
         p{
             img{
                 height: 1rem;
                 margin-right: 15px;
+
+                @media screen and (max-width: $desktopL){
+                   margin-right: 7px;
+                   }
+
+                   @media screen and (max-width: $mobileXL){
+                    height: .8rem;
+                }
             }
             margin-top: 40px;
+
+            @media screen and (max-width: $desktopL){
+                margin-top: 18px;
+            }
+
+            @media screen and (max-width: $mobileXL){
+                flex-basis: 100%;
+                order: 3;
+                text-align: center;
+            }
         }
 
         .container__icons{
@@ -53,8 +111,28 @@
                   transition: .3s;
                   &:hover{
                         transform: translateY(-10px);
+                    }
+
+                    @media screen and (max-width: $desktopL){
+                        height: 28px;
+                     }
+
+                     @media screen and (max-width: $desktopL){
+                        height: 24px;
+                    }
+                }    
+
+                @media screen and (max-width: $mobileXL){
+                    margin: 0 10px;
                 }
-                }        
+            }
+
+            @media screen and (max-width: $mobileXL){
+                flex-basis: 100%;
+                order: 2;
+                display: flex;  
+                justify-content: center;
+                margin-top: 10px;
             }
         }
 
@@ -78,10 +156,30 @@
                 width: 180px;
             }
 
+            @media screen and (max-width: $desktopL){
+                font-size: 1.1rem;
+                width: 140px;
+                margin-top: 20px;
+             }
+
+             @media screen and (max-width: $desktopL){
+                font-size: 1rem;
+                width: 120px;
+                padding: 10px 0;
+            }
+
+            @media screen and (max-width: $mobileXL){
+                flex-basis: 40%;
+                order: 4;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
             &:hover{
                 background-color: $title-color;
             }
         }
+
     }
 
     .container__contact-right{
@@ -91,6 +189,15 @@
             padding-left: 40px;
         }
 
+        
+        @media screen and (max-width: $desktop){
+        padding-left: 20px;
+        flex-basis: 50%;
+        }
+
+        @media screen and (max-width: $mobileXL){
+            padding: 0 40px;
+        }
 
         .contact__form{
             width: 100%;
@@ -105,6 +212,10 @@
                 font-size: 18px;
                 border-radius: 6px;
                 background-color: rgb(161, 161, 161);
+
+                @media screen and (max-width: $desktopL){
+                    padding: 10px;
+                 }
             }
 
             .form__submit{
@@ -124,6 +235,19 @@
                 @media screen and (max-width: $desktopXXL){
                     font-size: 1.2rem;
                     width: 160px;
+                }
+
+                @media screen and (max-width: $desktopL){
+                   font-size: 1.1rem;
+                   width: 140px;
+                   margin-top: 10px;
+                   padding: 12px 0;
+                }
+
+                @media screen and (max-width: $mobileXL){
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    width: 40%;
                 }
     
                 &:hover{
