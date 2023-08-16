@@ -24,6 +24,7 @@ body{
     max-width: 100vw;
     font-size: $base-font-size;
     background-color: $base-bgc;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
