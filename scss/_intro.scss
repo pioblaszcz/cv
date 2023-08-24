@@ -34,19 +34,19 @@
         p{
             margin: 0;
             line-height: 150%;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             text-shadow: 0 0 1px rgb(255, 255, 255);
 
-            @media screen and (max-width: $desktopL){
-               font-size: 1.4rem;
-              }
+            @media screen and (max-width: $desktopXL){
+                font-size: 1.6rem;
+             }
 
               @media screen and (max-width: $mobileXL){
-               font-size: 1.2rem;
+               font-size: 1.4rem;
             }
 
             @media screen and (max-width: $mobileXS){
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 }
 
             @media screen and (max-width: $mobileXXS){

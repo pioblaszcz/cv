@@ -1,5 +1,4 @@
 .scrollTop{
-    position: relative;
     cursor: pointer;    
     position: fixed;
     bottom: 10vh;
@@ -33,6 +32,7 @@
     min-height: 200vh;
     position: relative;
     width: 100vw;
+    overflow: hidden;
     background-color: $base-bgc;
 }
 
