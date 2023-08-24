@@ -2,17 +2,27 @@ const SPEED = 50;
 const TEXT = [
     "Cześć!",
     "Mam na imie Piotrek i zajmuję się tworzeniem aplikacji internetowych.",
-    "Obecnie pracuje z wykorzystaniem takich technologi jak JavaScript, Typescript czy React JS.",
+    "Obecnie pracuje głównie z wykorzystaniem React JS.",
 ];
 
+const TEXTEN = [
+    "Hi!",
+    "My name is Piter and I create websites and web applications.",
+    "Currently working mainly with React JS.",
+];
+
+
 export default class Typing {
-    constructor() {
+    constructor(lang = 'en') {
         this.box = document.querySelector('.intro__typing');
-        this.text = TEXT;
+        this.lang = lang;
+        this.text = this.lang === 'pl' ? TEXT : TEXTEN;
 
         this.textIndex = 0;
         this.wordIndex = 0;
         this.activeDOMElement = this.box;
+
+        this.timeOut;
 
         this.oldTime = 0;
 
@@ -26,7 +36,7 @@ export default class Typing {
                 if (this.textIndex === this.text.length - 1) {
                     return;
                 }
-                return setTimeout(this.goToNextLine, 1000);
+                this.timeOut = setTimeout(this.goToNextLine, 1000);
             }
             else if (this.wordIndex === 0 || letter === '^') {
                 const p = document.createElement('p');
@@ -44,6 +54,18 @@ export default class Typing {
         }
 
         requestAnimationFrame(this.write);
+    }
+
+    changeLang = () => {
+        this.lang = this.lang === 'pl' ? 'en' : 'pl';
+        this.text = this.lang === 'pl' ? TEXT : TEXTEN;
+        this.box.textContent = '';
+        this.activeDOMElement = this.box;
+        this.textIndex = 0;
+        this.wordIndex = 0;
+        this.oldTime = 0;
+        clearTimeout(this.timeOut);
+        this.write();
     }
 
     goToNextLine = () => {

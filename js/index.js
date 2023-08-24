@@ -1,4 +1,5 @@
 import Typing from './Typing.js';
+import Tranlaste from './Translate.js';
 
 class Website {
     constructor() {
@@ -6,6 +7,8 @@ class Website {
         this.hiddenRightElements = document.querySelectorAll('.hiddenRight');
         this.hiddenDownElements = document.querySelectorAll('.hiddenDown');
         this.hiddenElements = document.querySelectorAll('.hidden');
+
+        this.changeLangElement = document.querySelector('.header__lang');
 
         this.homeButton = document.getElementById('home');
         this.aboutButton = document.getElementById('about');
@@ -23,6 +26,8 @@ class Website {
 
         this.scrollTopElement = document.querySelector('.scrollTop');
 
+        this.translation = new Tranlaste();
+
         this.init();
     }
 
@@ -38,15 +43,20 @@ class Website {
         this.projectsButton.addEventListener('click', () => this.scrollTo(this.projects));
         this.contactButton.addEventListener('click', () => this.scrollTo(this.contact));
 
+        this.changeLangElement.addEventListener('click', () => {
+            this.translation.changeLang(this.changeLangElement);
+            this.typing.changeLang();
+        });
+
         this.hamburgerElement.addEventListener('click', this.toggleHamburgerActive);
 
-        this.scrollTopElement.addEventListener('click', () => this.scrollTo(this.header))
+        this.scrollTopElement.addEventListener('click', () => this.scrollTo(this.header));
 
         window.addEventListener('scroll', this.handleScroll);
     }
 
     showIntro = () => {
-        new Typing();
+        this.typing = new Typing();
     }
 
     scrollAnimation = () => {

@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="scrollTop">
-        <img src="images/icons/up.png" alt="">
+        <img src="images/icons/up.png" alt="scrollLogo">
     </div>
     <main class="cv">
         <div class="header__background"></div>
@@ -24,8 +25,13 @@
                 <nav class="header__nav">
                     <div class="header__images">
                         <img src="images/logo.PNG" class="header__logo" alt="logo">
-                        <img src="images/gh.svg" class="header__github header__icon" alt="github">
-                        <img src="images/in.svg" class="header__in header__icon" alt="github">
+                        <a href="https://github.com/pioblaszcz" target="_blank" class="header__iconWrapper">
+                            <img src="images/gh.svg" class="header__github header__icon" alt="github">
+                        </a>
+                        <a href="https://www.linkedin.com/in/piotr-b%C5%82aszczak-b7913928a/" target="_blank"
+                            class="header__iconWrapper">
+                            <img src="images/in.svg" class="header__in header__icon" alt="linkedin">
+                        </a>
                     </div>
                     <button class="header__hamburger">
                         <span class="hamburger__box">
@@ -34,24 +40,24 @@
                     </button>
                     <ul class="header__list">
                         <li id="home">Home</li>
-                        <li id="about">O mnie</li>
-                        <li id="projects">Projekty</li>
-                        <li id="contact">Kontakt</li>
-                        <li><img src="images/uk.png" class="header__lang" alt="change_language"></li>
+                        <li id="about">About</li>
+                        <li id="projects">Projects</li>
+                        <li id="contact">Contact</li>
+                        <li><img src="images/pollang.png" class="header__lang" alt="change_language"></li>
                     </ul>
                 </nav>
                 <div class="header__me">
                     <div class="header__informationElement">
-                        <p class="informationElement__p">Imie: <span>Piotr</span></p>
+                        <p class="informationElement__p" id="name">Name: <span>Piotr</span></p>
                     </div>
                     <div class="header__informationElement">
-                        <p class="informationElement__p">Nazwisko: <span>Błaszczak</span> </p>
+                        <p class="informationElement__p" id="lastname">Last name: <span>Błaszczak</span> </p>
                     </div>
                     <div class="header__informationElement">
-                        <p class="informationElement__p">Wiek: <span>19</span> </p>
+                        <p class="informationElement__p" id="age">Age: <span>19</span> </p>
                     </div>
                     <div class="header__informationElement">
-                        <p class="informationElement__p">Lokalizacja: <span>Warszawa, Polska</span> </p>
+                        <p class="informationElement__p" id="location">Location: <span>Warsaw, Poland</span> </p>
                     </div>
                 </div>
                 <div class="header__intro">
@@ -61,16 +67,16 @@
         </header>
         <div class="about">
             <div class="about__bio hiddenLeft">
-                <h2 class="bio__title">O mnie</h2>
+                <h2 class="bio__title" id="aboutme">About me</h2>
                 <div class="bio__image"></div>
-                <p class="bio__content"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae,
-                    voluptas fuga, consectetur tempore dolore molestias eos harum aut distinctio rerum consequuntur
-                    tempora excepturi fugit neque, beatae aperiam. Esse, itaque. Lorem ipsum dolor, sit amet consectetur
-                    adipisicing elit. Natus sed voluptatem quis eligendi illum repudiandae incidunt numquam? Doloremque
-                    totam, cumque ad sit quidem illum minima nam sunt aperiam qui fugit.</p>
+                <p class="bio__content" id="aboutcontent">Hi, my name is Piter and my passion is web application
+                    development. I wrote my first website when I was 14. This year I passed high school and from October
+                    I will be a computer science student at PJATK. In my projects, I pay attention to the visual layer
+                    and technology, using modern web solutions and creating new layouts gives me a lot satisfactions.
+                    I'm currently looking for a job in Warsaw as a Junior Front End Developer ;)</p>
             </div>
             <div class="about__technology hiddenRight">
-                <h2 class="technology__title">Technologie</h2>
+                <h2 class="technology__title" id="technologies">Technologies</h2>
                 <div class="technology__container">
                     <div class="technology__element">
                         <img src="images/icons/react.svg" alt="">
@@ -97,87 +103,119 @@
                 </div>
             </div>
             <div class="about__languages hiddenLeft">
-                <h2 class="languages__title">Jakie znam języki?</h2>
+                <h2 class="languages__title" id="languages">What about languages?</h2>
                 <div class="languages__lang">
                     <img src="images/icons/poland.png" alt="poland">
-                    <p>Polski <span>Narodowy</span> </p>
+                    <p id="polish">Polish <span>Native</span></p>
                 </div>
                 <div class="languages__lang">
-                    <img src="images/icons/gb.png" alt="grat britain">
-                    <p>Angielski <span>Komunikatywny (B1)</span> </p>
+                    <img src="images/icons/gb.png" alt="greatbritain">
+                    <p id="english">English <span>Communicative (B2)</span></p>
                 </div>
             </div>
             <div class="about__services">
-                <h1 class="services__title hidden">Czym się zajmuje?</h1>
+                <h1 class="services__title hidden" id="servicesTitle">What am I doing?</h1>
                 <div class="services__service hidden">
-                    <img src="images/icons/code.svg" alt="">
-                    <p class="service__title">programowanie</p>
-                    <p class="service__description">Strony WWW, aplikacje internetowe, blogi</p>
+                    <img src="images/icons/code.svg" alt="codingicon">
+                    <p class="service__title" id="programming">programming</p>
+                    <p class="service__description" id="programmingService">Websites, Web applications, Blogs</p>
                 </div>
                 <div class="services__service hidden">
-                    <img src="images/icons/graphic.png" alt="">
-                    <p class="service__title">grafika</p>
-                    <p class="service__description">Interfejsy aplikacji, obróbka grafik (Photoshop)</p>
+                    <img src="images/icons/graphic.png" alt="graphicicon">
+                    <p class="service__title" id="graphics">graphics</p>
+                    <p class="service__description" id="graphicsService">Application interfaces, Graphic processing
+                        (photoshop)</p>
                 </div>
             </div>
         </div>
         <div class="projects">
-            <h1 class="projects__title hidden">Portfolio aplikacji</h1>
+            <h1 class="projects__title hidden" id="projectsPortfolio">Application portfolio</h1>
             <div class="projects__content">
                 <div class="projects__project projects__project--dm hiddenLeft">
                     <img src="images/projects/drawingmaster2.png" alt="drawingmaster">
                     <div class="project__description">
                         <p class="project__title">Drawing Master</p>
-                        <div class="project__technologies">
+                        <div class="project__technologies project__technologies--dm">
                             <div>React.JS</div>
+                            <div>MobX</div>
                             <div>Scss</div>
                         </div>
-                        <p class="project__p">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum recusandae ipsa temporibus
-                            saepe dolor eaque neque illo, tempore inventore accusantium deleniti omnis? Eos officiis
-                            eveniet dignissimos nostrum tempore ut excepturi!
+                        <p class="project__p" id="dmDescription">
+                            Drwaing master is an online game that tests your memory and drawing skills. In the project I
+                            used technologies such as React Router or MobX for global state. The application is
+                            responsive and has customized drawings for both mobile and desktop versions :)
                         </p>
                         <div class="project__buttons">
-                            <button><a href="https://pioblaszcz.github.io/drawing-master/" target="_blank">Zobacz
-                                    aplikacjie</a></button><button><a
-                                    href="https://github.com/pioblaszcz/drawing-master" target="_blank">Zobacz
-                                    kod</a></button>
+                            <button class="dm"><a href="https://pioblaszcz.github.io/drawing-master/" target="_blank"
+                                    id="viewApp">View app</a></button><button class="dm"><a
+                                    href="https://github.com/pioblaszcz/drawing-master" target="_blank"
+                                    id="viewCode">View code</a></button>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="projects__project hiddenRight"></div> -->
+                <div class="projects__project projects__project--ccm hiddenRight">
+                    <img src="images/projects/ccm.png" alt="ccmApp">
+                    <div class="project__description">
+                        <p class="project__title">CCM - Crypto Market</p>
+                        <div class="project__technologies project__technologies--ccm">
+                            <div>React.JS</div>
+                            <div>Redux</div>
+                            <div>Scss</div>
+                        </div>
+                        <p class="project__p" id="ccmDescription">
+                            CCM is an investment platform that allows you to buy and sell popular cryptocurrencies at
+                            current rates. Due to the limitations of the API I used, prices are refreshed every 5
+                            minutes. In the project I used libraries such as Redux, React Router, moment or
+                            react-chartjs-2. The application also uses local storage
+                        </p>
+                        <div class="project__buttons">
+                            <button class="ccm"><a href="https://pioblaszcz.github.io/ccm-cryptocurrency-market/"
+                                    target="_blank" id="viewApp2">View app</a></button><button class="ccm"><a
+                                    href="https://github.com/pioblaszcz/ccm-crypto-curency-market" target="_blank"
+                                    id="viewCode2">View code</a></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="contact">
-            <h1 class="contact__title hidden">Kontakt</h1>
+            <h1 class="contact__title hidden" id="contactTtitle">Contact</h1>
             <div class="contact__container hidden">
                 <div class="container__contact-left">
-                    <p class="container__title">Napisz do mnie</p>
+                    <p class="container__title" id="textMe">Text me</p>
                     <p> <img src="images/icons/mail.png" alt="mail"> piotrblaszczakoo@gmail.com</p>
                     <p> <img src="images/icons/phone.svg" alt="phone">+48 792 868 079</p>
                     <div class="container__icons">
-                        <a href=""><img src="images/in.svg" alt=""></a>
-                        <a href=""><img src="images/gh.svg" alt=""></a>
-                        <a href=""><img src="images/icons/fb.svg" alt=""></a>
+                        <a href="https://www.linkedin.com/in/piotr-b%C5%82aszczak-b7913928a/"><img src="images/in.svg"
+                                alt="linkedin"></a>
+                        <a href="https://github.com/pioblaszcz" target="_blank"><img src="images/gh.svg"
+                                alt="github"></a>
+                        <a href="https://www.facebook.com/profile.php?id=100005502377954" target="_blank"><img
+                                src="images/icons/fb.svg" alt="facebook"></a>
                     </div>
-                    <a href="" class="container__button" download>Pobierz CV</a>
+                    <a href="" class="container__button" download id="cv">Download CV</a>
                 </div>
                 <div class="container__contact-right">
-                    <form class="contact__form">
-                        <input type="text" name="name" placeholder="Twoje imie" required>
-                        <input type="email" name="email" placeholder="Twój email" required>
-                        <textarea name="message" rows="6" placeholder="Twoja wiadomość"></textarea>
-                        <button type="submit" class="form__submit">Wyślij</button>
+                    <form class="contact__form" action="https://formsubmit.io/send/piotrblaszczakoo@gmail.com"
+                        method="POST">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                        <input name="_formsubmit_id" type="text" style="display:none">
+                        <input name="_redirect" type="hidden" id="name" value="https://pioblaszcz.github.io/cv/ ">
+                        <button type="submit" class="form__submit" id="submit">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
         <footer class="footer hidden">
             <p>Copyright © <span class="bold">Piotr Błaszczak</span> - 2023</p>
-            <p>Projekt i realizacja - <span class="bold"><a href="piotrblaszczak.pl">piotrblaszczak.pl</a></span></p>
+            <p id="footer" footer>Design and implementation - <span class="bold"><a
+                        href="piotrblaszczak.pl">piotrblaszczak.com</a></span></p>
         </footer>
     </main>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/index.js" type="module"></script>
 </body>
 

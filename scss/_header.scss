@@ -141,6 +141,11 @@
          }
     }
 
+    .header__iconWrapper{
+        display: flex;
+        align-items: center;
+    }
+
     .header__icon{
         cursor: pointer;
         width: 25px;

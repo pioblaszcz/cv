@@ -27,6 +27,7 @@
         flex-basis: 80%;
         height: 100%;
         margin: 0 auto;
+        margin-top: 2.6vh;
     }
 
     .projects__project{
@@ -79,6 +80,10 @@
             box-shadow: 0 2px 4px 0 $dm-color;
         }
 
+        &--ccm{
+            box-shadow: 0 2px 4px 0 $ccm-color;
+        }
+
         img{
             height: 60%;
 
@@ -124,7 +129,6 @@
 
                 div{
                     margin: 15px 15px 15px 0;
-                    background-color: $dm-color;
                     padding: 5px;
                     text-transform: uppercase;
                     font-weight: bold;
@@ -133,6 +137,18 @@
                     @media screen and (max-width: $desktopXL){
                         font-size: 0.9rem;
                      }
+                }
+
+                &--dm{
+                    div{
+                        background-color: $dm-color;
+                    }
+                }
+
+                &--ccm{
+                    div{
+                        background-color: $ccm-color;
+                    }
                 }
             }
             
@@ -199,14 +215,24 @@
             
                     }
 
-                    &:hover{
-                        border-color: $dm-color;
-                        color: $dm-color;
+                }
 
-                        a{
-                            color: $dm-color;
-                        }
-    
+                .dm:hover{
+                    border-color: $dm-color;
+                    color: $dm-color;
+
+                    a{
+                        color: $dm-color;
+                    }
+
+                }
+
+                .ccm:hover{
+                    border-color: $ccm-color;
+                    color: $ccm-color;
+
+                    a{
+                        color: $ccm-color;
                     }
 
                 }
