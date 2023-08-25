@@ -17,6 +17,7 @@
         width: 92%;
      }
 
+
     .intro__typing{
         position: absolute;
         top:0;
@@ -30,7 +31,6 @@
         @media screen and (max-height: 510px){
             display: none;
            }
-
         p{
             margin: 0;
             line-height: 150%;

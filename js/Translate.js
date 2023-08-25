@@ -176,11 +176,6 @@ const translation = [
         en: `Design and implementation - <span class="bold"><a
         href="piotrblaszczak.pl">piotrblaszczak.com</a></span>`
     },
-    {
-        id: 'bootstrap',
-        pl: 'Bootstrap <span>(podstawy)</span>',
-        en: 'Bootstrap <span>(basics)</span>'
-    }
 ];
 
 export default class Tranlaste {

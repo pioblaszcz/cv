@@ -7,7 +7,7 @@ const TEXT = [
 
 const TEXTEN = [
     "Hi!",
-    "My name is Piter and I create websites and web applications.",
+    "My name is Piotr and I create websites and web applications.",
     "Currently working mainly with React JS.",
 ];
 
